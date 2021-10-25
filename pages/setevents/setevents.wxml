@@ -1,0 +1,37 @@
+<!--pages/setevents/setevents.wxml-->
+<!-- 标题，优先级 -->
+<view class="edit">
+  <view class="title" >
+    <picker class="level_picker" mode = "selector" bindchange="inputLevel" value="{{level[idx].id}}" range="{{level}}" range-key="{{'val'}}">
+      <image wx:if="{{newlevel==0}}" class="level" src="../../images/icon/low1.png"/>
+      <image wx:if="{{newlevel==1}}" class="level" src="../../images/icon/medium1.png"/>
+      <image wx:if="{{newlevel==2}}" class="level" src="../../images/icon/high1.png"/>
+    </picker>
+    <input value="{{todoToday.title}}" bindinput="inputTitle" class="titleEdit" />
+  </view>
+
+<!-- 选择时间 -->
+  <view class="clock">
+    <image class="clock_icon" src="../../images/icon/clock.png"/>
+    <text class="clock_text">时间:</text>
+    <picker class="clock_time" mode="date" bindchange="inputDate" value="{{curdate}}" start="2008-1-1" end="2028-1-1">{{curdate}}</picker>
+  </view>
+
+<!-- 备忘 -->
+  <view class="detail_head">
+    <image class="detail_icon" src="../../images/icon/calendar.png"/>
+    <text class="detail_text">备忘录:</text>
+  </view>
+
+  <view class="detail">
+    <textarea class="mydetail" bindinput="inputDetail" maxlength="400" value="{{todoToday.detail}}" />
+  </view>
+
+<!-- 确认 -->
+  <view class="confirm">
+    <image class="cancel" bindtap="cancel" src="../../images/icon/cancel.png"/>
+    <view class="devider"></view>
+    <image class="save" bindtap="save" src="../../images/icon/save.png"/>
+  </view>
+</view>
+

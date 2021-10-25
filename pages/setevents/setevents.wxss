@@ -1,0 +1,143 @@
+/* pages/setevents/setevents.wxss */
+/* 标题 */
+.edit{
+  width: 100%;
+  height: 100%;
+}
+
+.title{
+  display:flex;
+  height: 100rpx;
+  margin-top: 70rpx; 
+  margin-left: 110rpx;
+  margin-bottom: 50rpx;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.level_picker{
+  align-self: center;
+  padding-right: 20rpx;
+}
+
+.level{
+  
+  width: 35rpx;
+  height: 35rpx;
+  /* margin-top: auto;
+  margin-bottom: auto;  */
+}
+
+.titleEdit{
+  margin-right: 140rpx;
+  padding-left: 10rpx;
+  padding-bottom: 5rpx;
+  align-self: center;
+  height: 80rpx;
+  font-size: 60rpx;
+  font-family: FZZhunYuan-M02S;
+  font-weight: lighter;
+  border-bottom: 1px solid #D0D0D0;
+}
+/* 时钟 */
+.clock{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5rpx;
+}
+
+.clock_icon{
+  width:40rpx;
+  height: 40rpx;
+  margin-left: 110rpx;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 5rpx;
+}
+
+.clock_text{
+  margin-left: 5rpx;
+  font-family: FZZhunYuan-M02S;
+  font-size: 40rpx;
+  font-weight: lighter;
+}
+
+.clock_time{
+  margin-left: auto;
+  margin-right: 110rpx;
+  font-family: FZZhunYuan-M02S;
+  font-size: 40rpx;
+  font-weight: lighter;
+}
+
+/* 备忘 */
+.detail_head{
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  margin-left: 110rpx;
+  margin-top: 5rpx;
+}
+
+.detail_icon{
+  height:40rpx;
+  width: 40rpx;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 5rpx;
+}
+
+.detail_text{
+  margin-left: 5rpx;
+  align-content: center;
+  font-family: FZZhunYuan-M02S;
+  font-size: 40rpx;
+  font-weight: lighter;
+}
+
+.detail{
+  height: 560rpx;
+  margin-top: 20rpx;
+  margin-left:100rpx;
+  margin-right: 100rpx;
+  font-family: FZZhunYuan-M02S;
+  border:1rpx solid #bbb;
+  border-radius: 20rpx;
+
+}
+
+.mydetail{
+  height: 550rpx;
+  margin-left :20rpx;
+  margin-right:  20rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  width: 93%; 
+}
+
+/* 保存 */
+.confirm{
+  margin-top: 140rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cancel{
+  margin-left: 190rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.devider{
+  width: 2rpx;
+  height:70rpx;
+  background-color: #aaa;
+  margin: 0 auto;
+}
+
+.save{
+  margin-right: 190rpx;
+  width: 60rpx;
+  height: 60rpx;
+}

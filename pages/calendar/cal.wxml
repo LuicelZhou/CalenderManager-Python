@@ -1,0 +1,59 @@
+<!-- 年月 -->
+<view class='calendar_title'>
+  <view class='icon' bindtap='lastMonth'>
+    <image src='../../images/icon/lastMonth.png' />
+  </view>
+  <view>{{year}}年{{month}}月</view>
+  <view class='icon' bindtap='nextMonth'>
+    <image src='../../images/icon/nextMonth.png' />
+  </view>
+</view>
+
+<!-- 日历 -->
+<view class='calendar'>
+  <view class='header'>
+    <view wx:for='{{date}}' wx:key='' class='{{(index == todayIndex) && isTodayWeek ? "weekMark" : ""}}'>{{item}}
+      <view></view>
+    </view>
+  </view>
+
+  <view class='date-box'>
+    <block wx:for='{{dateArr}}' wx:key=''>
+      <view class='{{isToday == item.isToday ? "nowDay" : ""}}'>
+        <view class='date-head' bindtap='showEvents' data-year='{{year}}' data-month='{{month}}' data-datenum='{{item.dateNum}}'>
+          <view>{{item.dateNum}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>
+
+<!-- 事件 -->
+<!-- <view class='events'>
+  <view class = "event-today"wx:for="{{TodayList}}" wx:key="{{}}">
+</view> -->
+<view class="subheader text-center" wx:if="{{todoNum <= 0}}">
+  <text>当前日期没有任务记录</text>
+</view>
+
+<view class="events">
+    <view class="subheader" wx:if="{{todoNum > 0}}">
+      <text>任务信息</text>
+    </view>
+    
+    <view class="elist" wx:for="{{todoToday}}" wx:key="id">
+      <view class="item" data-index="{{index}}"  wx:for-index="index" data-id="{{item._id}}" bindtap="showDetail" bindlongpress="delEvent">
+        <image wx:if="{{item.level==0}}" class="icon_level" src="../../images/icon/low.png"/>
+        <image wx:if="{{item.level==1}}" class="icon_level" src="../../images/icon/medium.png"/>
+        <image wx:if="{{item.level==2}}" class="icon_level" src="../../images/icon/high.png"/>
+        <view class="content">
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+    </view> 
+</view>
+
+<view class="add" bindtap="addEvents">
+  <image class="add_icon" src="../../images/icon/add.png"/>
+</view>
