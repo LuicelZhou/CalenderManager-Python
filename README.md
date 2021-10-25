@@ -1,7 +1,8 @@
-## CalenderManager--
-# Undergraduate Course project. 
+# CalenderManager--
+__Undergraduate Course project. __
 
-# 西安电子科技大学移动互联网课程设计
+
+__西安电子科技大学移动互联网课程设计__
 
 效果如下图(final interface as below)：
 
